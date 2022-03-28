@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class EmployeeNotFoundAdvice {
-
+public class OrderNotFoundAdvice {
+    // Indica que la excepcion será redireccionada al cuerpo de la petición
     @ResponseBody
-    @ExceptionHandler(EmployeeNotFoundException.class)
+    // Configura el Advice para responder solo cuando se lance una EmployeeNotFoundException
+    @ExceptionHandler(OrderNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String employeeNotFoundHandler(EmployeeNotFoundException ex) {
+    String employeeNotFoundHandler(OrderNotFoundException ex) {
         return ex.getMessage();
     }
 }

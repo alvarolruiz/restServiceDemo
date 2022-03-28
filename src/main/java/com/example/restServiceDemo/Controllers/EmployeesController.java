@@ -21,7 +21,6 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class EmployeesController {
 
     private final EmployeesRepository repository;
-
     private final EmployeeModelAssembler assembler;
 
 
